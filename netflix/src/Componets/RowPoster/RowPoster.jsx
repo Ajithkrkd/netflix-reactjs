@@ -39,7 +39,7 @@ const handleMovieTrailer=(id)=>{
 return(
 
     <div className='row'>
-        <h1 className='poster-title'>{props.title}</h1>
+        <h2 className='poster-title'>{props.title}</h2>
         <div className='posters'>
           {moviesPoster.map((obj)=>
           <img onClick={()=>handleMovieTrailer(obj.id)} className={props.isSmall ? 'smallPosterimg':"posterimg"} src={`${imgUrl+obj.backdrop_path}`} alt="" />

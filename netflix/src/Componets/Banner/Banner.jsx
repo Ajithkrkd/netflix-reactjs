@@ -6,15 +6,34 @@ import { useEffect ,useState } from 'react';
 import axios from "../../axios";
 import {API_KEY,imgUrl} from "../../Constants/constants"
 
+
 function Banner() {
   const [movie, setMovie] = useState()
-  useEffect(() =>{
-    console.log("first")
-    axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
-      const randomIndex = Math.floor(Math.random() * response.data.results.length);
-    setMovie(response.data.results[randomIndex]);
-    })
-  },[])
+  useEffect(() => {
+    console.log("first");
+  
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `trending/all/week?api_key=${API_KEY}&language=en-US`
+        );
+        const randomIndex = Math.floor(
+          Math.random() * response.data.results.length
+        );
+        setMovie(response.data.results[randomIndex]);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+    const intervalId = setInterval(() => {
+      fetchData();
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+  
   
 
   return (
