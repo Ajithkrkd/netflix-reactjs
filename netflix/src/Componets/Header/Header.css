@@ -1,0 +1,21 @@
+.nav{
+    position: fixed;
+    display: flex;
+    top:0;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    z-index: 1;
+    background-color:#111;
+}
+.logo{
+    height: 59px;
+    position: fixed;
+    left:20px;
+}
+.avatar{
+    height: 30px;
+    position: fixed;
+    right:20px;
+    top: 21px;
+}

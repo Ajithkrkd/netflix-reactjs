@@ -1,0 +1,63 @@
+.banner {
+    width: 100%;
+    height: 540px;
+    margin-top: 70px;
+    color: #fff;
+    background-size: cover;
+    background-image: url("./assets/netflixBanner.jpg");
+    overflow: hidden; 
+}
+
+.fade {
+    width: 100%;
+    height: 546px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background: linear-gradient(to top, #111, transparent);
+    pointer-events: none; 
+}
+
+.content {
+    padding-top: 140px;
+    height: 190px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+    padding-bottom: 26px;
+}
+
+.button {
+    font-weight: 700;
+    border-radius: 5px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.7);
+    color: #fff;
+    border: none;
+    margin-right: 12px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.banner-buttons {
+    padding-bottom: 26px;
+}
+
+.button:hover {
+    color: black;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.description {
+    line-height: 1.2;
+    max-width: 400px;
+}
